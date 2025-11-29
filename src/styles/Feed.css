@@ -1,0 +1,45 @@
+/* === FEED (Background Image + Modern Cards) === */
+
+.main-container {
+  max-width: 100%;
+  margin: 0 ;
+  padding: 2rem 1rem;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* ✅ Overlay styles only apply if .with-overlay is set */
+.main-container.with-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background: rgba(10, 15, 30, 0.6); */
+  z-index: 0;
+}
+
+/* ✅ No overlay mode */
+.main-container.no-overlay::before {
+  display: none;
+}
+
+/* Keep feed content above overlay */
+.main-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Title */
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: white;
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #6366f1;
+}

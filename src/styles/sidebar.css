@@ -1,0 +1,72 @@
+/* ===== Mini Menu Button (☰) ===== */
+.mini-menu-btn {
+  position: fixed;           /* stays fixed on screen */
+  top: 128px;                /* adjust distance from top */
+  /* left: 20px;                adjust distance from left */
+  background-color: #374151; /* dark gray */
+  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  z-index: 1200;             /* stays above page/image */
+}
+
+.mini-menu-btn:hover {
+   background-color: #4b5563; 
+  /* background-color: orange;  */
+}
+
+/* ===== Mini Dropdown (full height sidebar) ===== */
+.mini-dropdown {
+  position: fixed;            /* fixed like sidebar */
+  top: 170px;                 /* dropdown starts below button */
+  left: 0px;                 /* align with button */
+   background: #1f2937;        /*dark like sidebar */
+  
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 200px;
+  height: calc(100vh - 170px); /* fill remaining height */
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  overflow-y: auto;           /* scroll if too many items */
+  z-index: 1100;
+}
+
+/* ===== Dropdown Links ===== */
+.mini-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #d1d5db;
+  border-left: 3px solid transparent;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.mini-link:hover {
+  background-color: orange;
+  color: #fff;
+  border-left-color: orange;
+}
+
+.mini-link.active {
+  background-color: orange;
+  color: #fff;
+  border-left-color: orange;
+}
+.text-2xl font-bold mb-6 text-center{
+
+  color:black;
+}

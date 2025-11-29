@@ -1,0 +1,28 @@
+.admin-dashboard-container {
+  padding: 20px;
+}
+
+.activities-list {
+  list-style: none;
+  padding: 0;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.activity-time {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.activity-user {
+  font-weight: bold;
+}
+
+.activity-action {
+  font-style: italic;
+}

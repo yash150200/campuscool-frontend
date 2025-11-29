@@ -1,0 +1,100 @@
+/* Scene container */
+.scene {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(to top, #87cefa, #f4f4f4);
+  overflow: hidden;
+}
+
+/* Man PNG */
+.man {
+  position: relative;
+  bottom: 40px;
+  animation: walkIn 2s forwards;
+}
+.man-img {
+  width: 200px;
+  display: block;
+}
+
+/* Bag 
+.bag {
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  width: 60px;
+  height: 50px;
+  background: brown;
+  border-radius: 8px;
+  animation: dropBag 1s 1.5s forwards;
+  opacity: 0;
+}*/
+
+/* Login form inside scene */
+.login-form {
+  position: absolute;
+  bottom: 100px;
+  transform: translateY(50px) scale(0.8);
+  opacity: 0;
+  transition: 1s ease;
+  animation: popUp 1s forwards;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Inputs */
+.login-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.login-button:hover {
+  background-color: #218838;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.register-link {
+  color: #28a745;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes walkIn {
+  from { transform: translateX(-250px); }
+  to { transform: translateX(0); }
+}
+
+@keyframes dropBag {
+  to { opacity: 1; bottom: -5px; }
+}
+
+@keyframes popUp {
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+

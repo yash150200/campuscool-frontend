@@ -1,0 +1,205 @@
+/* ===============================
+   Attendance.css (Updated Premium UI with Background Overlay + Rainbow Border + Modern Card)
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+
+/* Whole page background wrapper */
+.attendance-page {
+  min-height: 100vh !important;
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  /* ✅ keep your image background */
+   /* background: url("C:/Users/Yash/Downloads/Gemini_Generated_Image_bpy2ttbpy2ttbpy2.png") 
+    no-repeat center center/cover; */
+   background:url("C:\Users\Yash\OneDrive\Desktop\campus-cool\client\public\attendance 1.jpg    ")     no-repeat center center/cover;
+
+
+  position: relative;
+  padding: 20px !important;
+  overflow: hidden;
+}
+
+/* Optional dark overlay to make card pop */
+.attendance-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.25); /* transparent overlay */
+  z-index: 0;
+}
+
+/* ===============================
+   Attendance Container (modern look)
+*/
+.attendance-container {
+  max-width: 700px !important;
+  width: 100% !important;
+  margin: 30px auto !important;
+  padding: 24px !important;
+  border-radius: 18px !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+
+  /* 🌈 Modern glassmorphism card */
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25) !important;
+  z-index: 1 !important;
+  position: relative;
+  overflow: hidden;
+  color: #111 !important; /* ✅ default text black inside card */
+}
+
+/* Animated rainbow border */
+.attendance-container::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 20px;
+  background: linear-gradient(
+    270deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00ab,
+    #ff0000
+  );
+  background-size: 600% 600%;
+  z-index: -1;
+  animation: rainbowBorder 8s linear infinite;
+}
+
+/* Inner transparent layer */
+.attendance-container::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: -1;
+}
+
+@keyframes rainbowBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* =========================
+   Title
+   ========================= */
+.attendance-container h2 {
+  text-align: center !important;
+  margin-bottom: 20px !important;
+  color: #1f2937 !important;
+  font-weight: 800 !important;
+  font-size: 22px !important;
+}
+
+/* =========================
+   Input Section
+   ========================= */
+.input-section {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  margin-bottom: 20px !important;
+  padding: 18px !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-radius: 12px !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  color: #111 !important; /* ✅ black text inside input section */
+}
+
+/* Input fields */
+.input-section input {
+  padding: 12px !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  outline: none !important;
+  transition: border 0.2s ease, box-shadow 0.2s ease !important;
+  color: #111 !important; /* ✅ input text black */
+}
+
+.input-section input:focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25) !important;
+}
+
+/* Buttons */
+.generate-btn,
+.view-btn {
+  padding: 12px !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  border: none !important;
+  color: #fff !important;
+  transition: all 0.2s ease !important;
+}
+
+.generate-btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+}
+.generate-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af) !important;
+  transform: translateY(-2px) !important;
+}
+
+.view-btn {
+  background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+  width: 100% !important;
+  margin-top: 14px !important;
+}
+.view-btn:hover {
+  background: linear-gradient(135deg, #16a34a, #15803d) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* =========================
+   Cards inside (View ID, Report, Student Report)
+   ========================= */
+.view-id-section,
+.report-section,
+.student-report {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 12px !important;
+  border: 1px solid #e5e7eb !important;
+  padding: 20px !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+  color: #111 !important; /* ✅ black text inside these sections */
+}
+
+.view-id-section h3,
+.report-section h3,
+.student-report h3 {
+  color: #111 !important; /* ✅ headings black */
+}

@@ -1,0 +1,24 @@
+.admin-notifications-container {
+  padding: 20px;
+}
+
+.admin-notifications-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-notifications-container li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.notif-time {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.notif-message {
+  font-weight: bold;
+}

@@ -1,0 +1,135 @@
+/* index.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+input,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Sidebar Styling */
+.sidebar-link {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: grey;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+  opacity: 1;
+}
+
+.sidebar-link:hover {
+  background-color: #ffa500;
+  color: white;
+  font-weight: 600;
+  opacity: 1;
+  box-shadow: 0 0 5px #ffa500;
+}
+
+.sidebar-link.active {
+  background-color: #ffa500;
+}
+
+.logout-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  opacity: 1;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.logout-btn:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+  opacity: 1;
+  box-shadow: 0 0 6px #ffffff;
+}
+
+/* === Layout Fix for Centered Feed === */
+
+
+/* 🌙 DARK MODE OVERRIDES */
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Containers */
+body.dark .container,
+body.dark .fees-container,
+body.dark .result-container,
+body.dark .career-container,
+body.dark .achievements-container,
+body.dark .timetable-container,
+body.dark .quiz-container,
+body.dark .feed-content,
+body.dark .attendance-container {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1 !important;
+  border-color: #333 !important;
+}
+
+/* Inputs */
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background-color: #2a2a2a !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #444 !important;
+}
+
+/* Buttons */
+body.dark button {
+  background-color: #444 !important;
+  color: #fff !important;
+}
+
+body.dark button:hover {
+  background-color: #666 !important;
+}
+
+/* Sidebar */
+body.dark .sidebar-link {
+  background-color: #2a2a2a !important;
+  color: #f1f1f1 !important;
+}
+
+body.dark .sidebar-link:hover,
+body.dark .sidebar-link.active {
+  background-color: #ffa500 !important;
+  color: white !important;
+}
